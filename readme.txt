@@ -44,21 +44,21 @@ This plugin adds a new WP-CLI command to export entries from Formidable Forms.
 
 ### Exporting All Form Entries
 ```bash
-wp formidable export --form_id=<form_id>
+wp formidable export_csv --form_id=<form_id>
 
 **Example:**
 
 ```bash
-wp formidable export --form_id=123
+wp formidable export_csv --form_id=123
 
 ### Export with Custom File Path
 ```bash
-wp formidable export --form_id=<form_id> --file_path=<file_path>
+wp formidable export_csv --form_id=<form_id> --file_path=<file_path>
 
 **Example:**
 
 ```bash
-wp formidable export --form_id=123 --file_path=/var/www/html/wp-content/uploads/formidable-export.csv
+wp formidable export_csv --form_id=123 --file_path=/var/www/html/wp-content/uploads/formidable-export.csv
 
 ### Export with Date Range Filtering
 
@@ -67,32 +67,32 @@ Filter entries by start and/or end date in YYYY-mm-dd format.
 #### Export with Start and End Date:
 
 ```bash
-wp formidable export --form_id=<form_id> --start-date=<start-date> --end-date=<end-date>
+wp formidable export_csv --form_id=<form_id> --start-date=<start-date> --end-date=<end-date>
 
 **Example:**
 
 ```bash
-wp formidable export --form_id=123 --start-date=2023-01-01 --end-date=2023-12-31
+wp formidable export_csv --form_id=123 --start-date=2023-01-01 --end-date=2023-12-31
 
 #### Export with Start Date Only:
 
 ```bash
-wp formidable export --form_id=<form_id> --start-date=<start-date>
+wp formidable export_csv --form_id=<form_id> --start-date=<start-date>
 
 **Example:**
 
 ```bash
-wp formidable export --form_id=123 --start-date=2023-01-01
+wp formidable export_csv --form_id=123 --start-date=2023-01-01
 
 #### Export with End Date Only:
 
 ```bash
-wp formidable export --form_id=<form_id> --end-date=<end-date>
+wp formidable export_csv --form_id=<form_id> --end-date=<end-date>
 
 **Example:**
 
 ```bash
-wp formidable export --form_id=123 --end-date=2023-12-31
+wp formidable export_csv --form_id=123 --end-date=2023-12-31
 
 
 == Frequently Asked Questions ==
