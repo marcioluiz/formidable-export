@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: Formidable Export CLI
- * Description: Export Formidable Form entries via WP-CLI.
+ * Plugin Name: Formidable Export CSV CLI
+ * Description: Export Formidable Form entries as a CSV file via WP-CLI.
  * Version: 0.1.2
  * Text Domain: formidable-export
  * Author: Márcio Luiz
  *
- * @package 	Formidable_Export
+ * @package 	Formidable_Export_CSV
  */
 
 // Exit if accessed directly.
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( defined( 'WP_CLI' ) && WP_CLI ) {
-    class Formidable_Export_CLI_Command extends WP_CLI_Command {
+    class Formidable_Export_CSV_CLI_Command extends WP_CLI_Command {
 
         /**
          * Export Formidable form entries to a CSV file.
@@ -36,11 +36,11 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
          *
          * ## EXAMPLES
          *
-         *     wp formidable export --form_id=123 --file_path=/path/to/save/file.csv --start-date=2023-01-01 --end-date=2023-12-31
+         *     wp formidable export_csv --form_id=123 --file_path=/path/to/save/file.csv --start-date=2023-01-01 --end-date=2023-12-31
          *
          * @when after_wp_load
          */
-        public function export( $args, $assoc_args ) {
+        public function export_csv( $args, $assoc_args ) {
             global $wpdb;
 
             // Ensure form_id is provided.
